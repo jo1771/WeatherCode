@@ -1,0 +1,49 @@
+@use "../../scss/mixin.scss" as *;
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    @include media(650px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &__span {
+            font-weight: 700;
+            font-size: 25px;
+            text-transform: uppercase;
+            color: #4793ff;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__input {
+        background: rgba(71, 147, 255, 0.2);
+        border-radius: 10px;
+        width: 194px;
+        height: 37px;
+        padding: 0 20px;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text);
+        }
+    }
+}
